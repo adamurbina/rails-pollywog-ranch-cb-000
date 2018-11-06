@@ -4,6 +4,7 @@ class TadpolesController < ApplicationController
   def metamorphose
     @tadpole = find_by(id: params[:id])
     @frog = Frog.create(name: @tadpole.name, color: @tadpole.color, pond: @tadpole.pond)
+    binding.pry
   end
 
   def index
