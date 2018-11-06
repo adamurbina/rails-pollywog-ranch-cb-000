@@ -2,7 +2,7 @@ class TadpolesController < ApplicationController
   before_action :set_tadpole, only: [:show, :edit, :update, :destroy, :metamorphose]
 
   def metamorphose
-    @tadpole = find_by(id: params[:id])
+    
     @frog = Frog.create(name: @tadpole.name, color: @tadpole.color, pond: @tadpole.pond)
     binding.pry
   end
