@@ -3,7 +3,8 @@ class TadpolesController < ApplicationController
 
   def metamorphose
     @frog = Frog.create(name: @tadpole.name, color: @tadpole.color, pond: @tadpole.pond)
-    binding.pry
+    @tadpole.destroy
+    redirect_to @frog
   end
 
   def index
