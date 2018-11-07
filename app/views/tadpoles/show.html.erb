@@ -17,6 +17,4 @@
   <img src="http://<%= @tadpole.color %>-tadpole.jpg.to/" alt="Tadpole Picture" width="300">
 </div>
 
-<%= button_to [:metamorphose, @tadpole] do %>
-  Become a Frog
-<% end %>
+<%= button_to "Become a Frog" [:metamorphose, @tadpole] %>
